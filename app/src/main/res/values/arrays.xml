@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rotation_entries">
+        <item>Вручную (кнопкой)</item>
+        <item>При каждом входе в браузер</item>
+        <item>При каждой загрузке страницы</item>
+    </string-array>
+    <string-array name="rotation_values">
+        <item>manual</item>
+        <item>launch</item>
+        <item>pageload</item>
+    </string-array>
+
+    <string-array name="ua_mode_entries">
+        <item>Реалистичный (Chromium-браузеры)</item>
+        <item>Реалистичный (любые браузеры)</item>
+        <item>Выдуманный (несуществующие браузеры)</item>
+        <item>Свой User-Agent</item>
+    </string-array>
+    <string-array name="ua_mode_values">
+        <item>chromium</item>
+        <item>any</item>
+        <item>fictional</item>
+        <item>custom</item>
+    </string-array>
+
+    <string-array name="device_entries">
+        <item>Телефон</item>
+        <item>Компьютер</item>
+        <item>Случайно</item>
+    </string-array>
+    <string-array name="device_values">
+        <item>mobile</item>
+        <item>desktop</item>
+        <item>any</item>
+    </string-array>
+
+    <string-array name="screen_entries">
+        <item>Случайное (под тип устройства)</item>
+        <item>Реальное (не подменять)</item>
+        <item>Своё (поле ниже)</item>
+        <item>360×800 @3 (Android)</item>
+        <item>412×915 @2.625 (Android)</item>
+        <item>393×873 @2.75 (Android)</item>
+        <item>390×844 @3 (iPhone)</item>
+        <item>430×932 @3 (iPhone)</item>
+        <item>1366×768 @1</item>
+        <item>1536×864 @1.25</item>
+        <item>1920×1080 @1</item>
+        <item>1440×900 @2 (Mac)</item>
+        <item>2560×1440 @1</item>
+    </string-array>
+    <string-array name="screen_values">
+        <item>random</item>
+        <item>real</item>
+        <item>custom</item>
+        <item>360x800@3</item>
+        <item>412x915@2.625</item>
+        <item>393x873@2.75</item>
+        <item>390x844@3</item>
+        <item>430x932@3</item>
+        <item>1366x768@1</item>
+        <item>1536x864@1.25</item>
+        <item>1920x1080@1</item>
+        <item>1440x900@2</item>
+        <item>2560x1440@1</item>
+    </string-array>
+
+    <string-array name="region_entries">
+        <item>Реальный (не подменять)</item>
+        <item>Случайный</item>
+        <item>Россия, Москва</item>
+        <item>Россия, Новосибирск</item>
+        <item>Казахстан, Алматы</item>
+        <item>Германия, Берлин</item>
+        <item>Нидерланды, Амстердам</item>
+        <item>Франция, Париж</item>
+        <item>Польша, Варшава</item>
+        <item>Испания, Мадрид</item>
+        <item>Турция, Стамбул</item>
+        <item>Великобритания, Лондон</item>
+        <item>США, Нью-Йорк</item>
+        <item>США, Чикаго</item>
+        <item>США, Лос-Анджелес</item>
+        <item>Бразилия, Сан-Паулу</item>
+        <item>ОАЭ, Дубай</item>
+        <item>Сингапур</item>
+        <item>Япония, Токио</item>
+    </string-array>
+    <string-array name="region_values">
+        <item>real</item>
+        <item>random</item>
+        <item>Europe/Moscow</item>
+        <item>Asia/Novosibirsk</item>
+        <item>Asia/Almaty</item>
+        <item>Europe/Berlin</item>
+        <item>Europe/Amsterdam</item>
+        <item>Europe/Paris</item>
+        <item>Europe/Warsaw</item>
+        <item>Europe/Madrid</item>
+        <item>Europe/Istanbul</item>
+        <item>Europe/London</item>
+        <item>America/New_York</item>
+        <item>America/Chicago</item>
+        <item>America/Los_Angeles</item>
+        <item>America/Sao_Paulo</item>
+        <item>Asia/Dubai</item>
+        <item>Asia/Singapore</item>
+        <item>Asia/Tokyo</item>
+    </string-array>
+
+    <string-array name="cookie_entries">
+        <item>Разрешить все</item>
+        <item>Только сайта (блокировать сторонние)</item>
+        <item>Запретить все</item>
+    </string-array>
+    <string-array name="cookie_values">
+        <item>all</item>
+        <item>first</item>
+        <item>none</item>
+    </string-array>
+
+    <string-array name="search_entries">
+        <item>DuckDuckGo</item>
+        <item>Startpage</item>
+        <item>Brave Search</item>
+        <item>Google</item>
+        <item>Яндекс</item>
+    </string-array>
+    <string-array name="search_values">
+        <item>https://duckduckgo.com/?q=%s</item>
+        <item>https://www.startpage.com/do/search?q=%s</item>
+        <item>https://search.brave.com/search?q=%s</item>
+        <item>https://www.google.com/search?q=%s</item>
+        <item>https://yandex.ru/search/?text=%s</item>
+    </string-array>
+</resources>

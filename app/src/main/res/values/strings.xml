@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Amnesia</string>
+    <string name="settings">Настройки</string>
+    <string name="url_hint">Поиск или адрес</string>
+    <string name="back">Назад</string>
+    <string name="forward">Вперёд</string>
+    <string name="reload">Обновить</string>
+    <string name="new_identity">Новая личность</string>
+    <string name="menu">Меню</string>
+
+    <string name="m_new_identity">🎭 Новая личность</string>
+    <string name="m_desktop">🖥 Десктоп-режим</string>
+    <string name="m_compat">🛡 Совместимость для сайта</string>
+    <string name="m_forget">🧹 Забыть всё</string>
+    <string name="m_identity_info">🔍 Текущий отпечаток</string>
+    <string name="m_check">🧪 Проверить отпечаток</string>
+    <string name="m_home">🏠 Домой</string>
+    <string name="m_settings">⚙️ Настройки</string>
+    <string name="m_exit">🚪 Выйти и забыть</string>
+
+    <string name="toast_new_identity">Новая личность: %1$s</string>
+    <string name="toast_forgot">Всё забыто 🧠✨</string>
+    <string name="toast_download">Загрузка: %1$s</string>
+    <string name="toast_download_fail">Не удалось скачать файл</string>
+    <string name="toast_no_app">Нет приложения для этой ссылки</string>
+    <string name="toast_proxy_bad">Неверный адрес прокси</string>
+    <string name="toast_copied">Скопировано</string>
+    <string name="warn_no_docstart">⚠️ Ваш WebView устарел: скрипт внедряется после начала загрузки страницы, часть сайтов может увидеть реальные значения. Обновите «Android System WebView» в Google Play.</string>
+
+    <!-- Настройки: заголовки категорий -->
+    <string name="cat_identity">Личность и отпечаток</string>
+    <string name="cat_fp">Шум и блокировки</string>
+    <string name="cat_amnesia">Деменция (забывание)</string>
+    <string name="cat_browser">Браузер</string>
+    <string name="cat_net">Сеть</string>
+    <string name="cat_compat">Антибот-проверки (Cloudflare и др.)</string>
+</resources>

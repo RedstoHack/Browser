@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- призрак: «никто», без лица и без памяти -->
+    <path android:fillColor="#9D7BFF"
+        android:pathData="M54,30c-11.6,0 -21,9.4 -21,21v27l6,-4.5 6,4.5 6,-4.5 6,4.5 6,-4.5 6,4.5 6,-4.5V51c0,-11.6 -9.4,-21 -21,-21z"/>
+    <path android:fillColor="#16131F"
+        android:pathData="M46,50m-4,0a4,4 0,1 0,8 0a4,4 0,1 0,-8 0M62,50m-4,0a4,4 0,1 0,8 0a4,4 0,1 0,-8 0"/>
+    <path android:fillColor="#16131F" android:pathData="M48,61h12v3h-12z"/>
+</vector>

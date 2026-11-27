@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/cat_identity" app:iconSpaceReserved="false">
+        <ListPreference
+            app:key="rotation_mode"
+            app:title="Когда менять личность"
+            app:entries="@array/rotation_entries"
+            app:entryValues="@array/rotation_values"
+            app:defaultValue="launch"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="ua_mode"
+            app:title="User-Agent"
+            app:entries="@array/ua_mode_entries"
+            app:entryValues="@array/ua_mode_values"
+            app:defaultValue="chromium"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="custom_ua"
+            app:title="Свой User-Agent"
+            app:summary="Используется, если выбран «Свой User-Agent»"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="device_type"
+            app:title="Притворяться устройством"
+            app:entries="@array/device_entries"
+            app:entryValues="@array/device_values"
+            app:defaultValue="mobile"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="screen_mode"
+            app:title="Разрешение экрана (для сайтов)"
+            app:entries="@array/screen_entries"
+            app:entryValues="@array/screen_values"
+            app:defaultValue="random"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="custom_screen"
+            app:title="Своё разрешение"
+            app:summary="Формат: ШИРИНАxВЫСОТА@DPR, например 1280x720@1.5"
+            app:defaultValue="1280x720@1.5"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="region"
+            app:title="Часовой пояс и язык"
+            app:entries="@array/region_entries"
+            app:entryValues="@array/region_values"
+            app:defaultValue="real"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="custom_langs"
+            app:title="Языки вручную"
+            app:summary="Например: en-US,en. Пусто — по региону"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="spoof_hardware"
+            app:title="Подменять железо"
+            app:summary="Ядра CPU, память, видеокарта (WebGL)"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/cat_fp" app:iconSpaceReserved="false">
+        <SwitchPreferenceCompat
+            app:key="noise_canvas"
+            app:title="Шум Canvas"
+            app:summary="Уникальный «почерк» рисования для каждой личности"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="noise_webgl"
+            app:title="Шум WebGL"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="noise_audio"
+            app:title="Шум AudioContext"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="noise_fonts"
+            app:title="Шум измерения шрифтов"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="noise_rects"
+            app:title="Шум ClientRects"
+            app:summary="Микросдвиг размеров элементов. Некоторые тесты видят это как подмену"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="block_webrtc"
+            app:title="Блокировать WebRTC"
+            app:summary="Защита от утечки локального/реального IP мимо VPN"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="hide_media"
+            app:title="Скрыть камеры и микрофоны"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="block_voices"
+            app:title="Скрыть голоса синтеза речи"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="spoof_battery"
+            app:title="Подменять батарею и сеть"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/cat_compat" app:iconSpaceReserved="false">
+        <Preference
+            app:key="compat_info"
+            app:selectable="false"
+            app:summary="Во фреймах проверок (Cloudflare Turnstile, hCaptcha, reCAPTCHA) подмена JS отключается всегда: там она ломает проверку. Сайты, где проверка не проходит, добавляйте через меню → «Совместимость для сайта»."
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="auto_challenge_cookies"
+            app:title="Сторонние куки для проверки"
+            app:summary="Автоматически разрешать их, пока на странице проверка Cloudflare/hCaptcha (без них она не проходит)"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="compat_all"
+            app:title="Совместимость везде"
+            app:summary="Подмена JS выключена на всех сайтах. Остаются User-Agent, Client Hints и «деменция»"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/cat_amnesia" app:iconSpaceReserved="false">
+        <SwitchPreferenceCompat
+            app:key="wipe_on_start"
+            app:title="Забывать при запуске"
+            app:summary="Полное удаление данных WebView перед стартом"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="wipe_on_exit"
+            app:title="Забывать при выходе"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="wipe_on_background"
+            app:title="Забывать при сворачивании"
+            app:summary="Жёстко: при переключении в другое приложение все входы сбросятся"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="wipe_on_rotate"
+            app:title="Забывать при смене личности"
+            app:summary="Иначе куки свяжут старую и новую личность"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="cookies"
+            app:title="Куки"
+            app:entries="@array/cookie_entries"
+            app:entryValues="@array/cookie_values"
+            app:defaultValue="first"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/cat_browser" app:iconSpaceReserved="false">
+        <ListPreference
+            app:key="search"
+            app:title="Поисковик"
+            app:entries="@array/search_entries"
+            app:entryValues="@array/search_values"
+            app:defaultValue="https://duckduckgo.com/?q=%s"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="home"
+            app:title="Домашняя страница"
+            app:defaultValue="https://duckduckgo.com/"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="javascript"
+            app:title="JavaScript"
+            app:summary="Без JS отпечаток почти не снять, но многие сайты сломаются"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="strip_tracking"
+            app:title="Чистить трекинг-параметры"
+            app:summary="utm_*, fbclid, gclid, yclid и др."
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="block_images"
+            app:title="Не загружать картинки"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="safe_browsing"
+            app:title="Google Safe Browsing"
+            app:summary="Защита от фишинга, но Google видит хэши адресов"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="block_screenshots"
+            app:title="Запретить скриншоты"
+            app:summary="И скрыть содержимое в списке недавних приложений"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/cat_net" app:iconSpaceReserved="false">
+        <EditTextPreference
+            app:key="proxy"
+            app:title="Прокси для браузера"
+            app:summary="Например socks5://127.0.0.1:9050 (Orbot/Tor). Пусто — без прокси"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</PreferenceScreen>
